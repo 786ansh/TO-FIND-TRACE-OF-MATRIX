@@ -1,0 +1,664 @@
+Q WAP to print 2d array?
+ANS
+   int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+       }
+       printf("\n");
+   }
+    for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d ",a[i][j]);
+           
+       }
+       printf("\n");
+       
+   }
+Q WAP to substract to matrix?
+ANS  int n,m;
+   scanf("%d %d",&n,&m);
+   int a1[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a1[i][j]);
+       }
+       printf("\n");
+   }
+    
+   
+   int a2[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a2[i][j]);
+       }
+       printf("\n");
+   }
+   int a3[n][m];
+   
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           a3[i][j]=a2[i][j]-a1[i][j];
+           
+       }
+       
+   }
+    for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d ",a3[i][j]);
+           
+       }
+       printf("\n");
+       
+   }
+   
+Q WAP TO ADD TO MATRIX?
+ANS  int n,m;
+   scanf("%d %d",&n,&m);
+   int a1[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a1[i][j]);
+       }
+       printf("\n");
+   }
+    
+   
+   int a2[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a2[i][j]);
+       }
+       printf("\n");
+   }
+   int a3[n][m];
+   
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           a3[i][j]=a2[i][j]+a1[i][j];
+           
+       }
+       
+   }
+    for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d ",a3[i][j]);
+           
+       }
+       printf("\n");
+       
+   }
+       
+Q WAP TO find whether matrix is equal or not ?
+ANS int n,m;
+   scanf("%d %d",&n,&m);
+   int a1[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a1[i][j]);
+       }
+       printf("\n");
+   }
+    
+   
+   int a2[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a2[i][j]);
+       }
+       printf("\n");
+   }
+   int flag=0;
+  for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           if(a1[i][j]==a2[i][j])
+           {
+              flag=1;
+               
+           }
+           else
+           {
+               flag=0;
+               break;
+           }
+               
+           
+       }
+       
+   }
+   if(flag=1)
+   {
+       printf("equal");
+       
+   }
+   else
+   printf("not equal");
+}
+
+Q WAP to find trace of matrix?
+ANS int n,m;
+   scanf("%d %d",&n,&m);
+   int a1[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a1[i][j]);
+       }
+       printf("\n");
+   }
+    
+   int sum=0;
+   
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           if (i==j)
+           {
+               sum=sum+a1[i][j];
+               
+           }
+       }
+       
+       
+   }
+   printf("%d",sum);
+
+Q WAP a program to print sum of diagonal element of matrix?
+ANS  int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+           
+       }
+   }
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+  int sum=0;
+   for(int i=0;i<n;i++)
+   {
+       
+       
+           sum=sum+a[i][i];
+        
+       
+   }
+   printf("%d",sum);
+Q WAP to print sum of minor dioagonal element?
+ans int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+           
+       }
+   }
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+  int sum=0;
+   for(int i=0;i<n;i++)
+   {
+       for (int j=0;j<m;j++)
+       {
+           if(i+j == ((n+1)-2))
+            {
+                sum += a[i][j];
+            }
+       }
+       
+   }
+   printf("%d",sum);
+
+Q WAP to print upper tringular matrix ?
+ANS  int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+           
+       }
+   }
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+ 
+  for(int i=0;i<n;i++)
+   {
+       for (int j=0;j<m;j++)
+       {
+          
+            if(i>=j)
+            {
+                printf("%d ",a[i][j]);
+            }
+            else
+               printf("%d ",0);
+               
+       }
+       printf("\n");
+       
+   }
+   
+Q WAP to print lower tringular matrix ?
+ans int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+           
+       }
+   }
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+ 
+  for(int i=0;i<n;i++)
+   {
+       for (int j=0;j<m;j++)
+       {
+          
+            if(j>=i)
+            {
+                printf("%d ",a[i][j]);
+            }
+            else
+            printf("%d ",0);
+               
+       }
+       printf("\n");
+       
+Q WAP to print sum of lower tringular matrix?
+ans int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+           
+       }
+   }
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+   int sum=0;
+  for(int i=0;i<n;i++)
+   {
+       for (int j=0;j<m;j++)
+       {
+          
+            if(j>=i)
+            {
+                sum=sum+a[i][j];
+            }
+       }
+       
+   }
+   printf("%d",sum);
+
+Q WAP to print sum of upper trianguar matrix?
+ans int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+           
+       }
+   }
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+   int sum=0;
+  for(int i=0;i<n;i++)
+   {
+       for (int j=0;j<m;j++)
+       {
+          
+            if(j<=i)
+            {
+                sum=sum+a[i][j];
+            }
+       }
+       
+   }
+   printf("%d",sum);
+   
+Q WAP to transpose of a matrix?
+ans int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+           
+       }
+   }
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+   printf("\n");
+  
+   int transpose[n][m];
+   
+  for(int i=0;i<n;i++)
+   {
+       for (int j=0;j<m;j++)
+       {
+          
+            transpose[j][i]=a[i][j];
+       }
+       
+   }
+    for(int i=0;i<n;i++)
+   {
+       for (int j=0;j<m;j++)
+       {
+           printf("%d",transpose[i][j]);
+       }
+       printf("\n");
+   }
+Q WAP to print whether matrix is sparse or not ?
+ans int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+           
+       }
+   }
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+   printf("\n");
+  
+  int count=0,count1=0;
+  for(int i=0;i<n;i++)
+   {
+       for (int j=0;j<m;j++)
+       {
+          
+          if(a[i][j]==0)
+          count++;
+          else
+          count1++;
+       }
+       
+   }
+   if(count>count1)
+   printf("sparse matrix");
+   else
+   printf("not sparse matrix");
+Q WAP to print whether matrix is identity matrix or not?
+ans int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+           
+       }
+   }
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+   printf("\n");
+  int flag=0;
+  
+  for(int i=0;i<n;i++)
+   {
+      for(int j=0;j<m;j++)
+      {
+          if (i==j && a[i][j]==1 )
+          flag=1;
+          else if (i!=j && a[i][j]==0 )
+           flag=1;
+           else
+           {
+               flag=0;
+               break;
+           }
+              
+          
+      }
+       
+   }
+   if(flag=1)
+   printf("identity matrix");
+   else
+   printf("not identity matrix");
+   
+Q WAP to print matrix is symmetric or not?
+ans  int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+           
+       }
+   }
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+   printf("\n");
+ int flag=0;
+  
+  for(int i=0;i<n;i++)
+   {
+      for(int j=0;j<m;j++)
+      {
+          if (a[i][j]==a[j][i])
+          flag=1;
+          else
+          {flag=0;
+          break;}
+              
+          
+      }
+       
+   }
+   if(flag=1)
+   printf("summetric matrix");
+   else
+   printf("not symmetric matrix");
+Q WAP to sclar product in a matrix?
+ANS  int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+           
+       }
+   }
+    for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+   int scalar_number;
+   scanf("%d",&scalar_number);
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           a[i][j]=scalar_number*a[i][j];
+           
+       }
+   }
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+Q wap to print multiple of two matrix?
+ans  int n,m;
+   scanf("%d %d",&n,&m);
+   int a[n][m];
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a[i][j]);
+           
+       }
+   }
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a[i][j]);
+       }
+       printf("\n");
+   }
+   int a1[n][m];
+    for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           scanf("%d",&a1[i][j]);
+           
+       }
+   }
+    for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a1[i][j]);
+       }
+       printf("\n");
+   }
+    int a2[n][m];
+    for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           a2[i][j]=a[i][j]*a1[i][j];
+           
+       }
+   }
+    for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<m;j++)
+       {
+           printf("%d",a2[i][j]);
+       }
+       printf("\n");
+   }
+
+   
